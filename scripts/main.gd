@@ -43,7 +43,7 @@ func ranSpawn(radius: float) -> Vector2:
 
 
 func _on_foe_spawn_timer_timeout() -> void:
-	var spawnCoords = ranSpawn(1000)
+	var spawnCoords = ranSpawn(500)
 	var instFoe = foeScene.instantiate()
 	add_child(instFoe)
 	instFoe.global_position = spawnCoords

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var core = get_parent().get_node("Core")
-const SPEED = 200.0
+const SPEED = 50.0
 
 
 
