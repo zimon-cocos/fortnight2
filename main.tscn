@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cur1o1p4i1pvm"]
+
+[ext_resource type="Script" uid="uid://cxanty7xkfjhg" path="res://scripts/main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ckjo15va1og7u" path="res://core.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Core" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(569, 333)
+
+[node name="FoeSpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="FoeSpawnTimer" to="." method="_on_foe_spawn_timer_timeout"]
